@@ -4,7 +4,9 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-//probando
+
+//probando 1
+
 // 👇 ESTA es la configuración correcta de CORS
 app.use(cors({
   origin: "http://localhost:5173", // el frontend con Vite
