@@ -77,7 +77,7 @@ jobs:
           PATCH_FILE="probando-k8s-mern/overlays/${{ steps.overlay.outputs.overlay }}/patch-frontend-deployment.yaml"   # <- corregido el path
 
           echo "Actualizando $PATCH_FILE con tag $IMAGE_TAG"
-          sed -i "s|image: .*/microservicio-front:.*|image: $IMAGE_NAME:$IMAGE_TAG|g" "$PATCH_FILE"    # <- corregido el nombre de imagen en el sed
+          sed -i "s|image: .*/frontend-mern-commonjs:.*|image: $IMAGE_NAME:$IMAGE_TAG|g" "$PATCH_FILE"    # <- corregido el nombre de imagen en el sed
 
       - name: Commit & Push de los manifiestos parchados
         run: |
